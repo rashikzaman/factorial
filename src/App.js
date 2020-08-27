@@ -16,23 +16,24 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div>
-        <h1>Factorial Calculator</h1>
-        <form onSubmit={(e) => processForm(e)}>
-          <input
-            type="number"
-            name="factorial"
-            placeholder="Enter a number..."
-            value={inputData}
-            required={true}
-            onChange={(e) => setInputData(e.target.value)}
-          />
-          <br />
-          <button type="submit">Calculate Factorial</button>
-        </form>
-        <h2>Factorial: {factorialValue}</h2>
-      </div>
+    <div
+      className="App"
+      style={{ display: "block", margin: "auto", width: "50vw", textAlign: "center" }}
+    >
+      <h1>Factorial Calculator</h1>
+      <form onSubmit={(e) => processForm(e)}>
+        <input
+          type="number"
+          name="factorial"
+          placeholder="Enter a number..."
+          value={inputData}
+          required={true}
+          onChange={(e) => setInputData(e.target.value)}
+        />
+        <br />
+        <button type="submit">Calculate Factorial</button>
+      </form>
+      <h2>Factorial: {factorialValue}</h2>
     </div>
   );
 }
